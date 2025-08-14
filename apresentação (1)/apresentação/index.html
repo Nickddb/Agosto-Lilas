@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação: Visita Técnica Febrafar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Teko:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ESTILOS GERAIS */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+            scroll-snap-type: y mandatory;
+            height: 100vh;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        /* ESTRUTURA DO SLIDE */
+        .slide {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 4rem;
+            box-sizing: border-box;
+            scroll-snap-align: start;
+            border-bottom: 2px solid #16213e;
+            position: relative;
+        }
+        
+        /* TÍTULOS E TEXTOS */
+        .slide-title {
+            font-family: 'Teko', sans-serif;
+            font-size: 5vw;
+            font-weight: 700;
+            color: #00f5d4; /* Verde neon */
+            margin: 0 0 2rem 0;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 245, 212, 0.5);
+            line-height: 1.1;
+        }
+
+        .slide-subtitle {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2vw;
+            font-weight: 300;
+            color: #f1f1f1;
+            margin-top: -1.5rem;
+            text-align: center;
+        }
+
+        .slide-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            gap: 2rem;
+        }
+        
+        .slide-content .text-content {
+            flex-basis: 50%;
+        }
+
+        .slide-content .image-content {
+            flex-basis: 45%;
+            text-align: center;
+        }
+        
+        .slide-content img {
+            max-width: 100%;
+            max-height: 60vh;
+            border-radius: 15px;
+            border: 3px solid #00f5d4;
+            box-shadow: 0 0 25px rgba(0, 245, 212, 0.4);
+        }
+
+        .slide-content p {
+            font-size: 1.5vw;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .slide-content ul {
+            font-size: 1.4vw;
+            line-height: 1.8;
+            list-style-type: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        .slide-content ul li {
+            background-color: rgba(255, 255, 255, 0.05);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-left: 5px solid #fa26a0; /* Magenta */
+            transition: all 0.3s ease;
+        }
+        
+        .slide-content ul li:hover {
+            transform: scale(1.02);
+            background-color: rgba(250, 38, 160, 0.2);
+        }
+
+        strong {
+            color: #f8961e; /* Laranja */
+            font-weight: 700;
+        }
+
+        /* SLIDES ESPECÍFICOS */
+        #slide1 { background: linear-gradient(45deg, #16213e, #0f3460); }
+
+             #slide1 img{
+            border-radius: 15px;
+            border: 3px solid #00f5d4;
+            box-shadow: 0 0 25px rgba(0, 245, 212, 0.4);
+             }
+
+
+
+        #slide_intro .intro-image {
+            width: 100%;
+            height: 100%;
+            background-image: url('http://googleusercontent.com/file_content/4');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        #slide_intro img{
+            border-radius: 15px;
+            border: 3px solid #00f5d4;
+            box-shadow: 0 0 25px rgba(0, 245, 212, 0.4);
+        }
+        #slide_intro .overlay {
+            background-color: rgba(26, 26, 46, 0.85);
+            padding: 3rem;
+            border-radius: 20px;
+        }
+        #slide3 .columns { display: flex; justify-content: space-around; width: 100%; align-items: flex-start; }
+        #slide3 .column { width: 45%; padding: 1rem; background-color: #0f3460; border-radius: 10px;}
+        #slide3 .column h3 { color: #f8961e; font-size: 2vw; border-bottom: 2px solid #f8961e; padding-bottom: 0.5rem;}
+        #slide3 .column p { font-size: 1.2vw; text-align: left; }
+        
+        #slide_lifecycle .phases { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; width: 100%;}
+        #slide_lifecycle .phase { background-color: #0f3460; padding: 1rem; border-radius: 8px; }
+        #slide_lifecycle .phase h3 { color: #f8961e; margin-top: 0; font-size: 1.5vw; }
+        #slide_lifecycle .phase p { font-size: 1.1vw; margin-bottom: 0; }
+
+        #slide_final {
+            background-image: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)), url('http://googleusercontent.com/file_content/3');
+            background-size: cover;
+            background-position: center;
+        }
+        #slide_final h1 { font-size: 8vw; color: #fff; text-shadow: 0 0 20px #00f5d4;}
+
+    </style>
+</head>
+<body>
+
+    <!-- SLIDE 1: TÍTULO -->
+    <div class="slide" id="slide1">
+        <h1 class="slide-title" style="font-size: 7vw;">AGOSTO LILÁS</h1>
+        <h2 class="slide-subtitle">Mês de conscientização e combate à violência contra a mulher</h2>
+        <p style="position: absolute; bottom: 20px; font-size: 1vw;">Role para baixo ou use as setas para avançar</p>
+                   
+        <div class="image-content">
+                <img src="logo_no_Brackground.png" alt="Palestrante explicando sobre Squads Multidisciplinares">
+            </div>
+    </div>
+
+    <!-- SLIDE 2: INTRODUÇÃO / AMBIENTE -->
+    <div class="slide" id="slide_intro">
+        <div class="intro-image">
+            <div class="overlay">
+                <h1 class="slide-title">O QUE É?</h1>
+                <p style="font-size: 1.8vw; text-align: center; max-width: 90%;">Vimos o ambiente de uma empresa de tecnologia de ponta.<br>Um espaço de colaboração, foco e muita inovação.</p>
+            </div>
+            <div class="image-content">
+                <img src="escritorio2.jpg" alt="escritorio febrafar">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 3: OBJETIVO -->
+    <div class="slide" id="slide2">
+        <h1 class="slide-title">CONTEXTO</h1>
+        <div class="slide-content">
+            <div class="text-content">
+                <ul>
+                    <li>Ver que o que aprendemos em aula <strong>ACONTECE DE VERDADE</strong> nas empresas.</li>
+                    <li>Entender como funcionam as <strong>Squads Multidisciplinares</strong>, com programadores, designers e gestores.</li>
+                    <li>Descobrir como a tecnologia resolve problemas reais, suportando uma <strong>demanda de trabalho gigante.</strong></li>
+                </ul>
+            </div>
+            <div class="image-content">
+                <img src="softskills.jpg" alt="Palestrante explicando sobre Squads Multidisciplinares">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 4: O CICLO DE VIDA DE UM SISTEMA -->
+    <div class="slide" id="slide_lifecycle">
+        <h1 class="slide-title">COMO NASCE UM SISTEMA?</h1>
+        <div class="slide-content">
+            <div class="text-content">
+                <div class="phases">
+                    <div class="phase">
+                        <h3>1. ANTES (A Ideia)</h3>
+                        <p>Tudo começa com uma necessidade. Há conversas, geração de demandas e documentos para definir o que será criado.</p>
+                    </div>
+                    <div class="phase">
+                        <h3>2. DURANTE (A Construção)</h3>
+                        <p>A equipe começa a projetar, programar e, crucialmente, testar cada parte do sistema para garantir a qualidade.</p>
+                    </div>
+                    <div class="phase">
+                        <h3>3. IMPLANTAÇÃO (O Lançamento)</h3>
+                        <p>O sistema é instalado e distribuído para os usuários. É a hora da verdade, quando o código vai para o mundo real!</p>
+                    </div>
+                    <div class="phase">
+                        <h3>4. DEPOIS (A Evolução)</h3>
+                        <p>O trabalho nunca para! É preciso prestar suporte, monitorar, fazer melhorias e gerenciar o sistema continuamente.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="figma.jpg" alt="Slide da Febrafar mostrando as fases de Descoberta, Ideação e Entrega de um projeto">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 5: TECNOLOGIAS -->
+    <div class="slide" id="slide4">
+        <h1 class="slide-title">A CAIXA DE FERRAMENTAS DOS DEVS</h1>
+        <div class="slide-content">
+            <div class="text-content">
+                <ul>
+                    <li><strong>Firebase & Flutter:</strong> A dupla do Google para criar APPs para celular.</li>
+                    <li><strong>Angular & .NET:</strong> Combinação poderosa para o front-end e o back-end dos sistemas.</li>
+                    <li><strong>PostgreSQL:</strong> O "cérebro" que guarda todos os dados de forma organizada.</li>
+                    <li><strong>Amazon AWS & Google Cloud:</strong> A "casa" dos sistemas, rodando na nuvem 24/7.</li>
+                    <li><strong>Docker:</strong> As "caixinhas" que garantem que o código funcione em qualquer lugar.</li>
+                </ul>
+            </div>
+            <div class="image-content">
+                <img src="tecnologias.jpg" alt="Slide da Febrafar mostrando a Tech Stack da empresa">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 6: CARREIRA -->
+    <div class="slide" id="slide5">
+        <h1 class="slide-title">"QUAL CAMINHO EU SIGO?"</h1>
+        <div class="slide-content">
+            <div style="text-align: center;">
+                <p style="font-size: 2vw; text-align: center;">A "Bala de Prata", a resposta perfeita... <strong>NÃO EXISTE! E está tudo bem.</strong></p>
+                <ul style="text-align: left;">
+                    <li><strong>O PONTO DE PARTIDA:</strong> O importante é <strong>COMEÇAR</strong>! Seja no curso técnico, faculdade ou cursos online.</li>
+                    <li><strong>A JORNADA É O DESTINO:</strong> Com o tempo, você vai "calibrando sua rota" e descobrindo o que mais gosta: Front-end? Back-end? Dados? Redes?</li>
+                    <li><strong>HARD SKILLS + SOFT SKILLS:</strong> Lembre-se: além do conhecimento técnico, o <strong>relacionamento interpessoal</strong> é fundamental!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 6: FOTO -->
+    <div class="slide" id="slide6">
+            <div class="image-content">
+                <img src="todosjuntos.jpg" alt="Pessoal que foi no passeio">
+            </div>
+
+        
+    </div>
+
+        <!-- SLIDE 7: MENSAGEM FINAL -->
+    <div class="slide" id="slide_final">
+
+        <h1 class="slide-title">DÚVIDAS E AGRADECIMENTOS</h1>
+    </div>
+
+
+
+
+</body>
+</html>
